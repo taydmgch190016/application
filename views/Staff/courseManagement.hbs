@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <div class="app">
+        {{> staffHeader}}
+        <div class="container">
+            <div class="grid">
+                <div class="row">
+                    <h1 class="text-uppercase text-center mt-3">Course Management</h1>
+                    <div class="function__mgt">
+                       <div class="function__mgt-add">
+                            <a class="btn btn-primary" href="/staff/courseAdd">Add Course</a>
+                       </div>
+                       <div class="function__mgt-search">
+                            <form class="d-flex input-group w-auto">
+                                <input type="search" class="form-control rounded" placeholder="Search"
+                                    aria-label="Search" aria-describedby="search-addon" />
+                                <span class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </form>
+                       </div>
+                        
+                    </div>
+                    <div class="e-panel card" style="background-color: #f5f5f5">
+                        <div class="card-body">
+                            <div class="card-title">
+                            </div>
+                            <div class="e-table">
+                                <div class="table-responsive table-lg mt-3">
+                                    <table class="table table-bordered">
+                                        <thead style="text-align: center;">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Category</th>
+                                                <th>Teacher</th>
+                                                <th>Description</th>
+                                                <th>Options</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="text-align: center;">
+                                            {{#each listCourse}}
+                                            <tr>
+                                                <td class="text-nowrap align-middle">{{this.code}} {{this.name}}</td>
+                                               
+                                                <td class="text-nowrap align-middle">{{this.categoryName}}</td>
+                                                
+                                                 <td class="text-nowrap align-middle">
+                                                      {{#each this.trainer}}
+                                                       {{this.fullname}}                                                     
+                                                      {{/each}}</td>
+                                                
+                                                <td class="text-nowrap align-middle">{{this.description}}</td>
+                                                <td class="text-center align-middle">
+                                                    <div class="btn-group align-top">
+                                                        <a href="/staff/courseEdit?id={{_id}}"
+                                                            class="btn btn-success">
+                                                            <span class="glyphicon glyphicon-edit"></span>
+                                                           <i class="fas fa-user-edit"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                           {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>

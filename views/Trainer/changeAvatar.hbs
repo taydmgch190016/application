@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="/trainer/changeAvatar/doChangeAvatar" method="post" class="form"  enctype="multipart/form-data">
+            <h3 class="heading">Change Avatar</h3>
+            <div class="form-group">
+                <img src="../{{trainerAvatar.image}}" alt="">
+                <label class="form-label" for="image">Upload image</label>
+                <input type="file" accept="image/*" name="image" value="" class="form-control text-14">      
+            </div>
+            <input type="submit" class="form-submit bg-success" value="Save">
+            <a href="/trainer/trainerProfile">
+                <input  class="form-submit bg-danger" value="Cancel" style="text-align: center;">
+            </a>
+        
+        </form>
+
+    </div>
+</body>
+
+</html>

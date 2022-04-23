@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="/admin/changePwdStaff/doPwdStaff" method="post" class="form">
+            <h3 class="heading">Change Password</h3>
+            <div class="spacer"></div>
+        
+            <input name="id" value="{{pwdStaff._id}}" type="hidden">
+
+            <div class="form-group">
+                <label class="form-label">New Password</label>
+                <input name="newPassword" value="{{pwdStaff.pasword}}" type="password" class="form-control">
+            </div>
+            
+            <input type="submit" class="form-submit bg-success" value="Save">
+            <a href="/admin/staffManagement">
+                <input  class="form-submit bg-danger" value="Cancel" style="text-align: center;">
+            </a>
+        
+        </form>
+
+    </div>
+</body>
+
+</html>

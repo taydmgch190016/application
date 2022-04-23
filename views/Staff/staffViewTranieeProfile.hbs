@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <div class="app">
+        <!-- Navbar -->
+        {{> staffHeader}}
+      
+        <!-- Navbar -->
+        <div class="container mt-5 py-5 h-100">
+            <h4 class="titile mb-4">{{profileTrainee.fullname}} Profile</h4>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-container">
+                        <div class="card">
+                            <div class="card mb-4">
+                                <div class="card-body text-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="../{{profileTrainee.image}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <span>Full name</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.fullname}}
+                                    </h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Username</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.username}}
+                                    </h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Password</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.password}}
+                                    </h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Email</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.email}}</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Age</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.age}}</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Address</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.address}}
+                                    </h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Education</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h5 class="form-control text-14 ">{{profileTrainee.education}}
+                                    </h5>
+                                </div>
+                                 <div class="block-center block-right">
+                                    <a href="/staff/traineeEdit?id={{profileTrainee._id}} "class="pl-4 pr-4 btn btn-dark">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <input name="id" value="{{profileTrainee._id}}" type="hidden">
+                    </div>
+                </div>
+                <hr>
+                <table width="100%" style="border: 1px solid transparent;">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <strong>For more information or any queries, please
+                                    contact:</strong>
+                                <br>
+                                Academic Affairs Department: Tel: <strong>024.730
+                                    66788</strong>
+                                (ext 2), Email: <strong>acad.gre.hn@fe.edu.vn</strong>
+                                <br>
+                                Student Affairs Department: Tel: <strong>024.730
+                                    66788</strong>
+                                (ext 1), Email: <strong>sro.gre.hn@fe.edu.vn</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{!-- footer --}}
+        {{> footer }}
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark p-md-3 bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">FPT.co</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" aria-current="page" href="/admin">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdownMenuLink" class="nav-link text-white" href="#" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Manages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="/admin/staffManagement">Staff management</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/admin/trainerManagement">Trainer management</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdownMenuLink" class="nav-link text-white" href="#" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Register
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="/admin/staffRegister">Create Staff </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/admin/trainerRegister">Create Trainer</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="mr-6 text-white">Admin</span>
+                <!-- Avatar -->
+                <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-mdb-toggle="dropdown" aria-expanded="false">
+                    <img src="/img/avatar.png" class="rounded-circle" height="25" alt="Error!" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="/admin/adminProfile?id={{_id}}">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <div class="app">
+        <!-- Navbar -->
+        {{> adminHeader}}
+        <div class="container mt-5">
+            <div class="row">
+                <div class="Flex content" style="flex: 1 1 0%; position: relative;">
+                    <div class="profile-container">
+                        <h4 class="titile mb-4">Profile</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container-fuild">
+                                    <div class="mb-3 row">
+                                        <input name="id" value="{{profileAdmin._id}}" type="hidden">
+                                        <div class="block-center block-left col-sm-3">
+                                            <span>UserName</span>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="txtUsername" value="{{profileAdmin.username}}"
+                                                class="form-control text-14">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="block-center block-left col-sm-3">
+                                            <span>Role</span>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="txtRole" value="{{profileAdmin.role}}"
+                                                class="form-control text-14">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="block-center block-right">
+                                                <button type="button" class="pl-4 pr-4 btn btn-dark">Change
+                                                    Password</button>
+                                                <button type="button" class="pl-4 pr-4 btn btn-dark">Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table width="100%" style="border: 1px solid transparent;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <strong>For more information or any queries, please
+                                            contact:</strong>
+                                        <br>
+                                        Academic Affairs Department: Tel: <strong>024.730
+                                            66788</strong>
+                                        (ext 2), Email: <strong>acad.gre.hn@fe.edu.vn</strong>
+                                        <br>
+                                        Student Affairs Department: Tel: <strong>024.730
+                                            66788</strong>
+                                        (ext 1), Email: <strong>sro.gre.hn@fe.edu.vn</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- footer --}}
+        {{> footer }}
+    </div>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>

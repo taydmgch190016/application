@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <div class="app">
+        <!-- Navbar -->
+        {{> trainerHeader}}
+        <!-- Navbar -->
+        <div class="container mt-5 py-5 h-100">
+            <h4 class="titile mb-4">Profile</h4>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-container">
+                                <div class="card-body text-center">
+                                    <div class="flex-shrink-0">
+                                        <a href="/trainer/changeAvatar"><button type="button" class="pl-4 pr-4 btn btn-dark"><img src="../{{profileTrainer.image}}" alt=""></button></a>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                              
+                                <form action="/trainer/trainerProfile/doTrainerProfile" method="post" class="form mb-3">
+                                    <div class="col-sm-3">
+                                        <span>Full name</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtFullname" value="{{profileTrainer.fullname}}"
+                                            class="form-control text-14">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span>Username</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtUsername" value="{{profileTrainer.username}}"
+                                            disabled class="form-control text-14">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span>Email</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtEmail" value="{{profileTrainer.email}}"
+                                            class="form-control text-14">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span>Age</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtAge" value="{{profileTrainer.age}}"
+                                            class="form-control text-14">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span>Address</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtAddress" value="{{profileTrainer.address}}"
+                                            class="form-control text-14">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span>Specialty</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="txtSpecialty" value="{{profileTrainer.specialty}}"
+                                            class="form-control text-14">
+                                    </div>
+                                    <div class="block-center block-right">
+                                        <a href="/trainer/changePwdTrainer"><button type="button" class="pl-4 pr-4 btn btn-dark">Change
+                                            Password</button></a>
+                                        <button type="submit" class="pl-4 pr-4 btn btn-dark">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <table width="100%" style="border: 1px solid transparent;">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <strong>For more information or any queries, please
+                                    contact:</strong>
+                                <br>
+                                Academic Affairs Department: Tel: <strong>024.730
+                                    66788</strong>
+                                (ext 2), Email: <strong>acad.gre.hn@fe.edu.vn</strong>
+                                <br>
+                                Student Affairs Department: Tel: <strong>024.730
+                                    66788</strong>
+                                (ext 1), Email: <strong>sro.gre.hn@fe.edu.vn</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{!-- footer --}}
+        {{> footer }}
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>

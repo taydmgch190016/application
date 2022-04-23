@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="/staff/doAddCourse" method="post" class="form">
+            <h3 class="heading">Add Course</h3>
+            <p class="desc">COURSE MANAGEMENT APPLICATION</p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label class="form-label">Code </label>
+                <input name="txtCode" type="number" placeholder="Ex: 1639" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input name="txtName" type="text" placeholder="Ex: web application" class="form-control">
+            </div>
+             <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="txtCategory" class="form-control" >
+                    {{#each listCategory }}
+                    <option value={{_id}}>{{name}}</option>
+                    {{/each}}                 
+            
+                </select>
+
+                {{!-- <input name="txtCategory" type="text" placeholder="Ex: WEB" class="form-control"> --}}
+            </div>
+           <div class="form-group">
+                <label class="form-label">Teacher</label>
+                <select name="txtTrainer" class="form-control">
+                    {{#each listTrainer}}
+                    <option value={{_id}}>{{fullname}}</option>
+                    {{/each}}
+                </select>
+                {{!-- <input name="txtCategory" type="text" placeholder="Ex: WEB" class="form-control"> --}}
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Description</label>
+                <input name="txtDescription" type="text" placeholder="" class="form-control">
+            </div>
+            <input type="submit" class="form-submit bg-success" value="ADD">
+            <a href="/staff/courseManagement">
+                <input  class="form-submit bg-danger" value="Cancel" style="text-align: center;">
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>

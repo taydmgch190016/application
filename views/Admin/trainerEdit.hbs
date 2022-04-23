@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="/admin/trainerEdit/doEditTrainer" method="post" class="form" enctype="multipart/form-data">
+            <h3 class="heading">Trainer Edit</h3>
+            <div class="spacer"></div>
+            
+            <input name="id" value="{{editTrainer._id}}" type="hidden">
+
+            <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input name="txtName" value="{{editTrainer.fullname}}" type="text" placeholder="Ex: Nguyễn Hải Long" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input name="txtEmail" value="{{editTrainer.email}}" type="email" placeholder="Ex: username@admin" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Role</label>
+                <input name="txtRole" placeholder="Trainer" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Age</label>
+                <input name="txtAge" value="{{editTrainer.age}}" type="number" placeholder="Ex: 20" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Address</label>
+                <input name="txtAddress" value="{{editTrainer.address}}" type="text" placeholder="Ex: Ha Noi" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Specailty</label>
+                <input name="txtSpecialty" value="{{editTrainer.specialty}}" type="text" placeholder="Ex: IT, Bunsiness.." class="form-control">
+            </div>
+            <div class="form-group">
+                <img src="../{{editTrainer.image}}" alt="">
+                <label class="form-label" for="image">Upload image</label>
+                <input type="file" name="image" value="" class="form-control text-14">      
+            </div>
+            <input type="submit" class="form-submit bg-success" value="Save">
+            <a href="/admin/trainerManagement">
+                <input  class="form-submit bg-danger" value="Cancel" style="text-align: center;">
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>

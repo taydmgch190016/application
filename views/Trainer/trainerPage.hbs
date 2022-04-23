@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+    <div class="app">
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+                {{> trainerHeaderData }}
+            </nav>
+            {{!-- carousel --}}
+            {{> carousel}}
+        </header>
+
+        {{!-- footer --}}
+        {{> footer }}
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        var nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 100) {
+                nav.classList.add('bg-dark', 'shadow');
+            } else {
+                nav.classList.remove('bg-dark', 'shadow');
+            }
+        });
+    </script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>
